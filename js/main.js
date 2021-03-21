@@ -10,6 +10,13 @@ var app = new Vue ({
             'img/photo03.jpg'
         ]
     },
+    
+    // Bonus1: Applicare l'autoplay allo slider: ogni 3 secondi, cambia immagine automaticamente.
+    created : function (){
+        setInterval(()=>{
+            this.nextPhoto();
+        },3000)
+    },
     methods : {
         nextPhoto(){
             this.counterPhoto++;
@@ -27,6 +34,5 @@ var app = new Vue ({
 })
 
 
-// Bonus1: Applicare l'autoplay allo slider: ogni 3 secondi, cambia immagine automaticamente.
 // Bonus2: Introdurre l' evento click sui pallini e visualizzare immagine relativa.
 // Bonus3: spazio alla fantasia 
