@@ -13,17 +13,17 @@
 <body>
     <div class="container">
         <div id="slider_photo" class="slider-wrapper">
-            <div class="prev" @click="prevPhoto">
+            <div class="prev" @click="prevPhoto" >
                 <i class="fas fa-angle-left"></i>
             </div>
             <div class="images">
                 <img :src="photos_slider[counterPhoto]" alt="">
             </div>
-            <div class="next" @click="nextPhoto">
+            <div class="next" @click="nextPhoto" >
                 <i class="fas fa-angle-right" ></i>
             </div>
             <div class="nav">
-                <i v-for="(photo,index) in photos_slider" class="fas fa-circle" :class="(index==counterPhoto)?'active':null"></i>
+                <i v-for="(photo,index) in photos_slider" class="fas fa-circle cliccable" :class="(index==counterPhoto)?'active':null" @click="thisPhoto(index)"></i>
             </div>
         </div>
     </div>
